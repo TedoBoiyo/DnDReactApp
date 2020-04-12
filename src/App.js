@@ -9,6 +9,7 @@ class App extends Component {
   render() {
     this.state = [
       {
+        'CharacterGuid': 1,
         'Name': 'TedoBoiyo',
         'Stats': {
           'Strength': 16,
@@ -18,14 +19,33 @@ class App extends Component {
           'Wisdom': 12,
           'Charisma': 16
         },
-        'Backstory': 'This is my backstory'
+        'Backstory': 'This is my backstory',
+        'InitiativeOrder': 2,
+        'HP': 45,
+        'DisplayHP': false
+      },
+      {
+        'CharacterGuid': 2,
+        'Name': 'Bob',
+        'Stats': {
+          'Strength': 18,
+          'Dexterity': 14,
+          'Intelligence': 8,
+          'Constitution': 18,
+          'Wisdom': 14,
+          'Charisma': 16
+        },
+        'Backstory': 'This is my backstory',
+        'InitiativeOrder': 1,
+        'HP': 100,
+        'DisplayHP': true
       }
     ]
 
     return (
       <Container style={{paddingTop: '20px'}}> 
         <Character Character={this.state} />
-        <InitiativeOrder Character={this.state} />
+        <InitiativeOrder Characters={this.state} />
       </Container>
     );
   }
