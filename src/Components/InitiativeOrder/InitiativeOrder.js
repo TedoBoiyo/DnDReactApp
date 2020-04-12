@@ -18,7 +18,7 @@ const InitiativeOrder = props => (
                 </Row>
                 <Row style={{padding: '5px'}}>
                     <Col md={12}>
-                        <HealthBar />
+                        <HealthBar DisplayHealth={true} />
                     </Col>
                 </Row>
             </Col>
