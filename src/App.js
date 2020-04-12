@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import Character from './Components/Character/Character';
+import InitiativeOrder from './Components/InitiativeOrder/InitiativeOrder';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-import './Components/Shared/CharacterImage.scss';
+import {Container} from 'react-bootstrap';
 
 class App extends Component {
   render() {
@@ -22,7 +23,10 @@ class App extends Component {
     ]
 
     return (
-      <Character Character={this.state} />
+      <Container style={{paddingTop: '20px'}}> 
+        <Character Character={this.state} />
+        <InitiativeOrder Character={this.state} />
+      </Container>
     );
   }
 }

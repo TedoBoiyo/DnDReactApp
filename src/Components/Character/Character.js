@@ -5,14 +5,14 @@ import CharacterImage from '../Shared/CharacterImage/CharacterImage';
 import { Row, Container, Col } from 'react-bootstrap';
 
 const Character = props => (
-    <Container style={{paddingTop: '20px'}}>
+    <div>
         <Row>
             <Col>
                 <h2>{props.Character[0].Name}</h2>
             </Col>
         </Row>
         <Row>
-            <Col md={4} className='emptyImage'>
+            <Col md={4}>
                 <CharacterImage Image='' />
             </Col>
             <Col md={8}>
@@ -24,7 +24,7 @@ const Character = props => (
                 <CharacterBackstory Backstory={props.Character[0].Backstory} />
             </Col>
         </Row>
-    </Container>
+    </div>
 )
 
 export default Character;
