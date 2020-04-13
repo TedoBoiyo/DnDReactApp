@@ -2,13 +2,14 @@ import React from 'react';
 import CharacterStats from './CharacterStats/CharacterStats';
 import CharacterBackstory from './CharacterBackstory/CharacterBackstory';
 import CharacterImage from '../Shared/CharacterImage/CharacterImage';
-import { Row, Container, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 const Character = props => (
     <div>
+        <h3>Character Profile</h3>
         <Row>
             <Col>
-                <h2>{props.Character[0].Name}</h2>
+                <h4>{props.Character[0].Name}</h4>
             </Col>
         </Row>
         <Row>

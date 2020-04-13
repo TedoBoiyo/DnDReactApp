@@ -1,12 +1,12 @@
 import React from 'react';
 import CharacterBox from '../Shared/CharacterBox/CharacterBox';
 
-const InitiativeOrder = props => (
+const MarchingOrders = props => (
     <div>
-        <h3>Initiative Order</h3>
+        <h3>Marching Order</h3>
         {
             props.Characters
-            .sort((a, b) => a.InitiativeOrder > b.InitiativeOrder)
+            .sort((a, b) => a.MarchingOrder > b.MarchingOrder)
             .map(Character => (
                 <CharacterBox key={Character.CharacterGuid} Character={Character} InBattle={props.InBattle} />
             ))
@@ -14,4 +14,4 @@ const InitiativeOrder = props => (
     </div>
 )
 
-export default InitiativeOrder;
+export default MarchingOrders;
