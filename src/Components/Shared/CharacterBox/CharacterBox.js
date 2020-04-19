@@ -6,7 +6,7 @@ import '../../Shared/CharacterImage/CharacterImage.scss';
 
 const CharacterBox = props => (
     <Row>
-        <Col md={4} style={{border: '1px solid black', paddingTop: '10px', paddingBottom: '10px'}}>
+        <Col style={{border: '1px solid black', paddingTop: '10px', paddingBottom: '10px', backgroundColor: 'darkblue', color: 'white'}}>
             <Row > 
                 <Col md={8}>
                     <Row>
@@ -26,7 +26,7 @@ const CharacterBox = props => (
                         props.Character.DisplayHP 
                         ? <Row>
                             <Col md={12}>
-                                <HealthBar DisplayHP={props.Character.DisplayHP} HP={props.Character.HP} />
+                                <HealthBar DisplayHP={props.Character.DisplayHP} DisplayHPLabel={props.Character.DisplayHPLabel} HP={props.Character.HP} />
                             </Col>
                         </Row> 
                         : null

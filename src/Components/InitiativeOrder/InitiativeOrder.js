@@ -5,10 +5,10 @@ const InitiativeOrder = props => (
     <div>
         <h3>Initiative Order</h3>
         {
-            props.Characters
+            props.Session.Party
             .sort((a, b) => a.InitiativeOrder > b.InitiativeOrder)
             .map(Character => (
-                <CharacterBox key={Character.CharacterGuid} Character={Character} InBattle={props.InBattle} />
+                <CharacterBox key={Character.CharacterGuid} Character={Character} InBattle={props.Session.InBattle} />
             ))
         }
     </div>

@@ -5,8 +5,9 @@ import CharacterImage from '../Shared/CharacterImage/CharacterImage';
 import { Row, Col } from 'react-bootstrap';
 
 const Character = props => (
-    <div>
+    <div style={{padding: '5px'}}>
         <h3>Character Profile</h3>
+        <hr />
         <Row>
             <Col>
                 <h4>{props.Character[0].Name}</h4>
